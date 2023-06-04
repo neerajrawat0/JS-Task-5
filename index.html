@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form onclick="return f1()">
+            <input type="number" id="num" placeholder="Enter a number" >
+            <input type="submit">
+        </form>
+        <div id="i1"></div>
+        <script>
+            function f1(){
+                 var a=document.getElementById('num').value;
+                var n=0;
+                while(a!=0)
+                {
+                    n=(n*10)+(a%10);
+                    a=a-(a%10);
+                    a=a/10;
+                }
+                  document.getElementById('i1').innerHTML=n;
+                  return false;
+            }
+        </script>
+    </body>
+</html>
